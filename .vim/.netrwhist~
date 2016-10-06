@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/etc/systemd/user'
+let g:netrw_dirhist_2='/usr/lib/pm-utils/sleep.d'
+let g:netrw_dirhist_3='/home/pretzelface/src/javascript-koans/koans'
