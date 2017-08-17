@@ -6,8 +6,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls -G'
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Show git branch name and bash prompt
 # bold for dirty branches
@@ -41,12 +39,6 @@ branch_color ()
   echo -ne $color
 }
 PS1='\u@\h \w \[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]$ '
-export ANDROID_HOME=~/Library/Android/sdk
-export ANDROID_NDK=~/Library/Android/ndk
-export SPAMFIRE=true
-alias adbreverse='adb reverse tcp:8081 tcp:8081'
-alias befs='bundle exec foreman start'
-alias befsi='bundle exec foreman start init'
 alias gco='git checkout'
 alias glo='git log --online master..HEAD'
 alias gst='git status'
@@ -56,3 +48,17 @@ alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 alias gaa='git add -A'
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+PATH=$PATH:./node_modules/*
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+alias yqal='yarn run quality'
+set -o vi
+alias f='yarn run flow'
+export NPM_TOKEN=fbfa3e61-7ccf-4df8-ba0a-d27d0586119e
+alias gra='git rebase --abort'
+
+runSpec () {
+  echo "running spec $1"
+  SPEC=$1 yarn run test:server
+}
+alias yspec=runSpec
+
