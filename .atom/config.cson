@@ -1,0 +1,52 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "linter"
+      "whitespace"
+      "github"
+      "tree-view"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontFamily: "FiraCode-light"
+    fontSize: 13
+    preferredLineLength: 100
+    showInvisibles: true
+  "exception-reporting":
+    userId: "8ed7d04c-be6e-49f7-b912-352e7be79e99"
+  "linter-eslint":
+    fixOnSave: true
+  "linter-ui-default":
+    panelHeight: 234
+  nuclide:
+    "atom-ide-diagnostics-ui": {}
+    "nuclide-flow":
+      canUseFlowBin: true
+    "nuclide-home":
+      showHome: false
+    "nuclide-objc":
+      enableAutomaticSquareBracketInsertion: false
+    "nuclide-ocaml":
+      enableDiagnostics: false
+    "nuclide-python":
+      autocompleteArguments: false
+      enableLinting: false
+      showGlobalVariables: false
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false
